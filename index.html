@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Innovate</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="progress-bar"></div>
+    <nav id="navbar">
+      <div class="logo">
+        <img src="title.jpeg" alt="Student Innovate Logo" class="logo-img" />
+        Student Innovate
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <div class="hero">
+        <h1>Welcome to Student Innovate</h1>
+        <p>Empowering students to transform ideas into reality</p>
+        <a href="#projects" class="cta-button">Explore Projects</a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="ai-research.svg" alt="AI Research" />
+          </div>
+          <h3>AI Research</h3>
+          <p>
+            Student-led artificial intelligence research projects focusing on
+            machine learning and data analysis.
+          </p>
+          <a href="#" class="project-link"
+            >Learn More <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="green-tech.svg" alt="Green Tech" />
+          </div>
+          <h3>Green Tech</h3>
+          <p>
+            Sustainable technology solutions for tomorrow's environmental
+            challenges.
+          </p>
+          <a href="#" class="project-link"
+            >Learn More <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2>Success Stories</h2>
+      <div class="testimonials-container">
+        <div class="testimonial-grid">
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p>
+                "Student Innovate's mentorship program transformed my startup
+                idea into a funded venture. The hands-on guidance and networking
+                opportunities were game-changing for my career."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="https://source.unsplash.com/random/100x100/?portrait-1"
+                  alt="Sarah Johnson"
+                  class="author-image"
+                />
+                <div class="author-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>AI Research Lead, TechStart</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p>
+                "The collaborative environment and expert guidance helped me
+                develop my technical skills and leadership abilities. Now I'm
+                leading a team of developers at a top tech company."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="https://source.unsplash.com/random/100x100/?portrait-2"
+                  alt="Michael Chen"
+                  class="author-image"
+                />
+                <div class="author-info">
+                  <h4>Michael Chen</h4>
+                  <p>Senior Developer, InnovateTech</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p>
+                "The project-based learning approach gave me real-world
+                experience that set me apart in job interviews. The mentorship
+                was invaluable for my professional growth."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="https://source.unsplash.com/random/100x100/?portrait-3"
+                  alt="Emma Rodriguez"
+                  class="author-image"
+                />
+                <div class="author-info">
+                  <h4>Emma Rodriguez</h4>
+                  <p>Product Manager, FutureScale</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p class="contact-description">
+            Ready to start your innovation journey? Reach out to us and let's
+            discuss how we can help you achieve your goals.
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Visit Us</h3>
+                <p>
+                  Innovation Hub, 123 Tech Street<br />Silicon Valley, CA 94025
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>
+                  hello@studentinnovate.com<br />support@studentinnovate.com
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+1 (555) 123-4567<br />Mon-Fri, 9:00-17:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="Your message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>Student Innovate</h3>
+          <p>
+            Empowering the next generation of innovators through mentorship,
+            resources, and hands-on experience in cutting-edge technology
+            projects.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Success Stories</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h3>Stay Updated</h3>
+          <p>
+            Subscribe to our newsletter for the latest updates and
+            opportunities.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Student Innovate. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
