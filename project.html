@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Events</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+        }
+        .glow {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+        .swiper {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 400px;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #60A5FA;
+        }
+        .swiper-pagination-bullet-active {
+            background: #60A5FA;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-100">
+    <!-- Navigation -->
+    <nav class="gradient-bg p-6 sticky top-0 z-50 shadow-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-blue-400 text-3xl font-bold glow">Our Events</div>
+            <div class="space-x-8">
+                <a href="#immuto" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-lg">Immuto</a>
+                <a href="#mathospher" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-lg">Mathospher</a>
+                <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-lg">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Immuto Event Section -->
+    <section id="immuto" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-6xl font-bold mb-6 text-blue-400 glow">Immuto</h2>
+                <p class="text-2xl text-gray-400">A celebration of transformation and innovation in technology</p>
+            </div>
+            
+            <!-- Immuto Slider -->
+            <div class="swiper immutoSwiper mb-16">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Immuto Event 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Immuto Event 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Immuto Event 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Immuto Event 4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Immuto Event 5" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Immuto Event 6" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Immuto Event 7" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="bg-gradient-to-r from-gray-900 to-blue-900 p-10 rounded-2xl shadow-2xl">
+                <h3 class="text-3xl font-bold mb-6 text-blue-300">Event Details</h3>
+                <ul class="text-gray-300 space-y-4 text-xl">
+                    <li class="flex items-center"><span class="text-2xl mr-4">📅</span> December 15, 2024</li>
+                    <li class="flex items-center"><span class="text-2xl mr-4">📍</span> Tech Convention Center</li>
+                    <li class="flex items-center"><span class="text-2xl mr-4">🎟️</span> Starting from $299</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mathospher Event Section -->
+    <section id="mathospher" class="py-24 gradient-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-6xl font-bold mb-6 text-blue-400 glow">Mathospher</h2>
+                <p class="text-2xl text-gray-300">Where mathematics meets the digital sphere</p>
+            </div>
+            
+            <!-- Mathospher Slider -->
+            <div class="swiper mathospherSwiper mb-16">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Mathospher Event 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Mathospher Event 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Mathospher Event 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Mathospher Event 4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Mathospher Event 5" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide rounded-xl overflow-hidden shadow-2xl">
+                        <img src="/api/placeholder/400/500" alt="Mathospher Event 6" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="bg-black bg-opacity-50 p-10 rounded-2xl shadow-2xl backdrop-blur">
+                <h3 class="text-3xl font-bold mb-6 text-blue-300">Event Details</h3>
+                <ul class="text-gray-300 space-y-4 text-xl">
+                    <li class="flex items-center"><span class="text-2xl mr-4">📅</span> January 20, 2025</li>
+                    <li class="flex items-center"><span class="text-2xl mr-4">📍</span> Science Academy</li>
+                    <li class="flex items-center"><span class="text-2xl mr-4">🎟️</span> Starting from $249</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="gradient-bg py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="backdrop-blur bg-black bg-opacity-20 p-8 rounded-xl">
+                    <h4 class="text-blue-400 text-2xl font-bold mb-6">Contact Us</h4>
+                    <ul class="text-gray-300 space-y-4">
+                        <li class="flex items-center"><span class="mr-3">📧</span> events@ourdomain.com</li>
+                        <li class="flex items-center"><span class="mr-3">📞</span> (555) 123-4567</li>
+                        <li class="flex items-center"><span class="mr-3">📍</span> 123 Event Avenue</li>
+                        <li class="flex items-center"><span class="mr-3">🌎</span> Tech City, TC 12345</li>
+                    </ul>
+                </div>
+                <div class="backdrop-blur bg-black bg-opacity-20 p-8 rounded-xl">
+                    <h4 class="text-blue-400 text-2xl font-bold mb-6">Quick Links</h4>
+                    <ul class="text-gray-300 space-y-4">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors duration-300">FAQ</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors duration-300">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="backdrop-blur bg-black bg-opacity-20 p-8 rounded-xl">
+                    <h4 class="text-blue-400 text-2xl font-bold mb-6">Follow Us</h4>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-lg">Twitter</a>
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-lg">Instagram</a>
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-lg">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Swiper sliders
+        new Swiper(".immutoSwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        new Swiper(".mathospherSwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
