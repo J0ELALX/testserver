@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Our Events - Student Innovate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project-styles.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: relative;
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Button styles */
+        .add-event-btn {
+            background: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 20px 0;
+            transition: background 0.3s;
+        }
+
+        .add-event-btn:hover {
+            background: #0056b3;
+        }
+
+        .admin-button-container {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Preview styles */
+        .photo-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .preview-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .preview-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .file-count {
+            margin: 10px 0;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .file-name {
+            background: #f8f9fa;
+            padding: 5px 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .uploaded-files {
+            margin: 10px 0;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        /* Form group styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #f8f9fa;
+        }
+
+        /* Add these to your existing styles */
+        .event-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .remove-event-btn {
+            background: #dc3545;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .remove-event-btn:hover {
+            background: #c82333;
+        }
+
+        /* Optional: Add animation for removal */
+        .project-section {
+            transition: opacity 0.3s, transform 0.3s;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .project-section.removing {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <img src="title.jpeg" alt="Student Innovate Logo" id="logoImage">
+        </div>
+        <div class="header-title">
+            <h1>Our Events</h1>
+        </div>
+        <div class="header-buttons">
+            <a href="index.html"><button class="btn" id="eventsButton">Home</button></a>
+        </div>
+    </header>
+
+    <section id="completed-projects" class="project-section">
+        <h2>MATHOSPHERE</h2>
+        <div class="project-grid">
+            <div class="project-card image-box">
+                <img src="img1.jpg" alt="Image 1" class="completed-image">
+            </div>
+            <div class="project-card image-box">
+                <img src="img2.jpg" alt="Image 2" class="completed-image">
+            </div>
+            <div class="project-card image-box">
+                <img src="img3.jpg" alt="Image 3" class="completed-image">
+            </div>
+            <div class="project-card image-box">
+                <img src="img4.jpg" alt="Image 4" class="completed-image">
+            </div>
+            <div class="project-card image-box">
+                <img src="img5.jpg" alt="Image 5" class="completed-image">
+            </div>
+            <div class="project-card image-box">
+                <img src="img6.jpg" alt="Image 6" class="completed-image">
+            </div>
+            <div class="project-card image-box">
+                <img src="img7.jpg" alt="Image 7" class="completed-image">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="ongoing-projects" class="project-section">
+        <h2>Immuto</h2>
+        <div class="project-grid">
+            <div class="project-card image-box">
+                <img src="imu1.jpg" alt="Ongoing Project 1" class="ongoing-image">
+            </div>
+            <div class="project-card image-box">
+                <img src="imu2.jpeg" alt="Ongoing Project 2" class="ongoing-image">
+            </div>
+            <div class="project-card image-box">
+                <img src="imu3.jpg" alt="Ongoing Project 3" class="ongoing-image">
+            </div>
+            <div class="project-card image-box">
+                <img src="imu4.jpg" alt="Ongoing Project 4" class="ongoing-image">
+            </div>
+            <div class="project-card image-box">
+                <img src="imu5.jpg" alt="Ongoing Project 5" class="ongoing-image">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="future-projects" class="project-section">
+        <h2>Future Events</h2>
+        <div class="project-grid">
+            <!-- Your existing Future Events content -->
+        </div>
+    </section>
+
+    <!-- Add New Event Button -->
+    <div class="admin-button-container">
+        <button class="add-event-btn" id="addEventButton">Add New Event</button>
+    </div>
+
+    <footer>
+        <p>Contact us: info@studentinnovate.com | © 2024 Student Innovate</p>
+    </footer>
+
+    <script src="admin-projects.js"></script>
+
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add New Event</h2>
+            <form class="event-form" id="eventForm">
+                <div class="form-group">
+                    <label for="eventName">Event Name</label>
+                    <input type="text" id="eventName" required>
+                </div>
+                <div class="form-group">
+                    <label for="photoInput">Event Photos</label>
+                    <input type="file" id="photoInput" multiple accept="image/*">
+                    <div class="uploaded-files" id="uploadedFiles"></div>
+                    <div class="photo-preview" id="photoPreview"></div>
+                </div>
+                <button type="submit" class="submit-btn">Create Event</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

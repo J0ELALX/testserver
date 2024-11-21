@@ -1,0 +1,421 @@
+/* Prevent horizontal scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* General styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    color: #fff;
+    animation: backgroundShift 10s ease-in-out infinite;
+    background-size: 150%;
+    perspective: 2000px;
+    scroll-behavior: smooth;
+}
+
+@keyframes backgroundShift {
+    0% { background-position: left top; }
+    50% { background-position: right bottom; }
+    100% { background-position: left top; }
+}
+/* Header Styling - Ultra Minimal with Floating Effect */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.85); /* Darker but slightly translucent for depth */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(30px); /* High blur for glass effect */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); /* Deep shadow for floating effect */
+    border-radius: 15px; /* Rounded corners for a soft, sleek look */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.15); /* Thinner bottom border for sleekness */
+}
+
+/* Logo - Interactive Hover with Smooth Animation */
+.logo img {
+    width: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    filter: drop-shadow(0 0 8px #00d4ff); /* Soft glowing shadow */
+    border-radius: 50%; /* Perfectly rounded edges for a minimalist look */
+}
+
+.logo img:hover {
+    transform: scale(1.2) rotate(6deg); /* Interactive scaling and subtle rotation */
+    filter: drop-shadow(0 0 15px #00d4ff); /* Enhanced glowing effect */
+}
+
+/* Header Title - Animated Glow & Hover */
+.header-title h1 {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    background: linear-gradient(135deg, #00d4ff, #007bff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease, filter 0.3s ease;
+     margin-left: 60px;
+}
+
+.header-title h1::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #00d4ff;
+    transition: width 0.4s ease;
+}
+
+.header-title h1:hover::after {
+    width: 100%;
+    transform: scaleX(1.1); /* Slight stretching on hover for emphasis */
+}
+
+.header-title h1:hover {
+    letter-spacing: 5px;
+    transform: translateY(-8px); /* Upward motion with hover */
+    filter: brightness(1.3); /* Brighter effect on hover for emphasis */
+}
+
+/* Button Styling - Neumorphism & Interactive Hover Effect */
+.btn {
+    padding: 14px 36px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Soft neumorphism shadow */
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #00d4ff;
+    transform: translateY(-5px); /* Lifts the button on hover */
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5); /* Deep glow effect */
+}
+
+/* Button Ripple Effect - Dynamic Expansion */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.btn:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Smooth ripple effect on hover */
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Card Hover Effect for Sections - Subtle Elevation */
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Smooth elevation on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow for elevation */
+}
+
+/* Footer Styling - Interactive Links and Smooth Transitions */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #222;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+    letter-spacing: 1px; /* Slight expansion of letters */
+}
+
+/* Footer Link Underline Animation */
+footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00d4ff;
+    transition: width 0.4s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+/* Custom Scrollbar for Sleekness */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #00d4ff;
+}
+
+/* Responsive Design - Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    #header {
+        padding: 15px 25px;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .header-title h1 {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 12px 28px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 30px;
+    }
+
+    .header-title h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+}
+
+/* Project section */
+.project-section {
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.project-section h2 {
+    font-size: 35px;
+    
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    position: relative;
+    animation: floatText 3s ease-in-out infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    animation: fadeIn 1.5s ease;
+}
+
+.card {
+    perspective: 1000px;
+}
+
+.image-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box:hover::after {
+    top: -40px;
+    right: -40px;
+    width: 80px;
+    height: 80px;
+    filter: blur(40px);
+    background: rgba(0, 128, 255, 0.5);
+}
+
+.image-box:hover {
+    transform: translateY(-20px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 100px rgba(0, 128, 255, 0.3);
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-bottom: 4px solid #00d4ff;
+    border-radius: 10px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.9);
+    transform: translateZ(30px);
+}
+
+.image-box:hover img {
+    transform: scale(1.1) translateZ(40px);
+    filter: brightness(1.3);
+}
+
+.image-box h3 {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #00d4ff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform: translateZ(15px);
+}
+
+.image-box .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.image-box:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.image-box .card-front,
+.image-box .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.image-box .card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box .card-back {
+    background: rgba(173, 216, 230, 0.9);
+    color: #00d4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+button {
+    margin-top: 30px;
+    background-color: #004d66;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #00d4ff;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-box {
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-section h2 {
+        font-size: 2.2em;
+    }
+
+    .image-box {
+        max-width: 100%;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}

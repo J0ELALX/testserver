@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login - Student Innovate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 2.5rem;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+
+        .form-group label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            padding: 1rem;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background: #ffffff;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+
+        .login-btn {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 1rem;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-family: 'Open Sans', sans-serif;
+            transition: color 0.3s;
+        }
+
+        .forgot-password a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .login-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .login-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #adminNo {
+            text-transform: uppercase;
+        }
+
+        .login-btn.loading {
+            background: linear-gradient(45deg, #cccccc, #999999);
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="logo">
+            <img src="title.jpeg" alt="Student Innovate Logo" id="logoImage">
+        </div>
+        <div class="header-title">
+            <h1>Student Innovate</h1>
+        </div>
+        <div class="header-buttons">
+            <a href="index.html"><button class="btn">Home</button></a>
+            <a href="project.html"><button class="btn">Our Events</button></a>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div id="progressBarContainer">
+        <div id="progressBar"></div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-container">
+        <h2 class="login-title">Welcome Back</h2>
+        <p class="login-subtitle">Please enter your credentials to continue</p>
+        <form class="login-form">
+            <div class="form-group">
+                <label for="adminNo">Admin Number</label>
+                <input 
+                    type="text" 
+                    id="adminNo" 
+                    name="adminNo" 
+                    placeholder="Enter your admin number" 
+                    maxlength="4"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter your password" 
+                    maxlength="4"
+                    required>
+            </div>
+            <button type="submit" class="login-btn">Sign In</button>
+            <div class="forgot-password">
+                <a href="#">Forgot your password?</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p>Contact: info@studentinnovate.com</p>
+            <div class="social-icons">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
